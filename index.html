@@ -131,9 +131,22 @@
 </div>
 
 <!-- 底部版权 -->
-<div class="footer">
-    © 2026 我的个人主页 | All Rights Reserved
+<div class="email-footer">
+    <p>📮 联系邮箱：<span id="email">2679037609@qq.com</span>
+    <button onclick="copyEmail()">复制邮箱</button></p >
+    <p style="margin-top:12px;font-size:14px;color:#666;">© 2026 我的个人主页 | All Rights Reserved</p >
 </div>
-
+<script>
+function copyEmail(){
+    const text = document.getElementById("email").innerText;
+    navigator.clipboard.writeText(text);
+    alert("✅ 邮箱复制成功！");
+}
+</script>
+<style>
+.email-footer{text-align:center;padding:30px 20px;margin-top:40px;}
+.email-footer button{margin-left:10px;padding:4px 10px;border:none;border-radius:6px;background:#409eff;color:white;cursor:pointer;}
+.email-footer button:hover{background:#337ecc;}
+</style>
 </body>
 </html>
